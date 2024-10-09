@@ -1,0 +1,10 @@
+{% extends "base.html" %}
+
+{% block content %}
+    <form method="POST">
+        Nome: <input type="text" name="nome" value="{{ aluno.nome }}"><br>
+        Email: <input type="email" name="email" value="{{ aluno.email }}"><br>
+        Idade: <input type="number" name="idade" value="{{ aluno.idade }}"><br>
+        <button type="submit">Atualizar</button>
+    </form>
+{% endblock %}

@@ -1,0 +1,13 @@
+{% extends "base.html" %}
+
+{% block content %}
+    <a href="{{ url_for('create') }}">Adicionar Aluno</a>
+    <ul>
+        {% for aluno in alunos %}
+            <li>{{ aluno.nome }} - {{ aluno.email }} - {{ aluno.idade }}
+                <a href="{{ url_for('edit', id=aluno.id) }}">Editar</a>
+                <a href="{{ url_for('delete', id=aluno.id) }}">Deletar</a>
+            </li>
+        {% endfor %}
+    </ul>
+{% endblock %}
